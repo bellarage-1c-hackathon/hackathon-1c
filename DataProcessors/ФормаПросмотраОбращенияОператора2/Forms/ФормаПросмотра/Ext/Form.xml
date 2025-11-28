@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<HorizontalSpacing>Double</HorizontalSpacing>
+	<VerticalSpacing>Double</VerticalSpacing>
+	<HorizontalAlign>Center</HorizontalAlign>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Button name="НазначитьДругому" id="120">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НазначитьДругому</CommandName>
+			<ExtendedTooltip name="НазначитьДругомуРасширеннаяПодсказка" id="121"/>
+		</Button>
+		<InputField name="ФИОСотрудник" id="84">
+			<DataPath>Объект.ФИОСотрудник</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ФИОСотрудникКонтекстноеМеню" id="85"/>
+			<ExtendedTooltip name="ФИОСотрудникРасширеннаяПодсказка" id="86"/>
+		</InputField>
+		<UsualGroup name="ГруппаНомерДата" id="23">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalSpacing>None</HorizontalSpacing>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>DontUse</ThroughAlign>
+			<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<LabelField name="ТекущееОбращениеНомер" id="20">
+					<DataPath>Объект.ТекущееОбращение.Number</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обращение №</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ContextMenu name="ТекущееОбращениеНомерКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТекущееОбращениеНомерРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="ТекущееОбращениеДата" id="34">
+					<DataPath>Объект.ТекущееОбращение.Date</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<ContextMenu name="ТекущееОбращениеДатаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТекущееОбращениеДатаРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="80">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="82">
+					<VerticalStretch>true</VerticalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВертикальная" id="39">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вертикальная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<Group>Vertical</Group>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВертикальнаяРасширеннаяПодсказка" id="40"/>
+							<ChildItems>
+								<InputField name="ТекущееОбращениеОтветственный" id="87">
+									<DataPath>Объект.ТекущееОбращение.Ответственный</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТекущееОбращениеОтветственныйКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ТекущееОбращениеОтветственныйРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<InputField name="ТекущееОбращениеСтатус" id="25">
+									<DataPath>Объект.ТекущееОбращение.Статус</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Left</TitleLocation>
+									<Width>1</Width>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>1</MaxHeight>
+									<VerticalStretch>true</VerticalStretch>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТекущееОбращениеСтатусКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ТекущееОбращениеСтатусРасширеннаяПодсказка" id="27"/>
+								</InputField>
+								<InputField name="ТекущееОбращениеКаналПоступления" id="90">
+									<DataPath>Объект.ТекущееОбращение.КаналПоступления</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТекущееОбращениеКаналПоступленияКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ТекущееОбращениеКаналПоступленияРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<InputField name="ТекущееОбращениеТема" id="11">
+									<DataPath>Объект.ТекущееОбращение.Тема</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Left</TitleLocation>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<MaxWidth>40</MaxWidth>
+									<Height>2</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>2</MaxHeight>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<BorderColor>#919191</BorderColor>
+									<HeightControlVariant>UseContentHeight</HeightControlVariant>
+									<ContextMenu name="ТекущееОбращениеТемаКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ТекущееОбращениеТемаРасширеннаяПодсказка" id="13"/>
+								</InputField>
+								<InputField name="ТекущееОбращениеОписание" id="17">
+									<DataPath>Объект.ТекущееОбращение.Описание</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<MaxWidth>46</MaxWidth>
+									<Height>4</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>4</MaxHeight>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТекущееОбращениеОписаниеКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ТекущееОбращениеОписаниеРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<InputField name="ТекущееОбращениеКатегория" id="93">
+									<DataPath>Объект.ТекущееОбращение.Категория</DataPath>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТекущееОбращениеКатегорияКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ТекущееОбращениеКатегорияРасширеннаяПодсказка" id="95"/>
+									<Events>
+										<Event name="OnChange">ТекущееОбращениеКатегорияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТекущееОбращениеПриоритет" id="96">
+									<DataPath>Объект.ТекущееОбращение.Приоритет</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТекущееОбращениеПриоритетКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ТекущееОбращениеПриоритетРасширеннаяПодсказка" id="98"/>
+								</InputField>
+								<InputField name="ВремяРеакции" id="114">
+									<DataPath>ВремяРеакции</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ВремяРеакцииКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="ВремяРеакцииРасширеннаяПодсказка" id="116"/>
+								</InputField>
+								<InputField name="ВремяРешения" id="117">
+									<DataPath>ВремяРешения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ВремяРешенияКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="ВремяРешенияРасширеннаяПодсказка" id="119"/>
+								</InputField>
+								<InputField name="ПринятьДо" id="105">
+									<DataPath>ПринятьДо</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ПринятьДоКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ПринятьДоРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="РешитьДо" id="108">
+									<DataPath>РешитьДо</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="РешитьДоКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="РешитьДоРасширеннаяПодсказка" id="110"/>
+								</InputField>
+								<InputField name="ТекущееОбращениеКлиент" id="111">
+									<DataPath>Объект.ТекущееОбращение.Клиент</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТекущееОбращениеКлиентКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ТекущееОбращениеКлиентРасширеннаяПодсказка" id="113"/>
+								</InputField>
+								<InputField name="НаписатьСообщение" id="72">
+									<DataPath>Объект.НаписатьСообщение</DataPath>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<Width>45</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>45</MaxWidth>
+									<Height>4</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>4</MaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<BorderColor>#FFB366</BorderColor>
+									<ContextMenu name="НаписатьСообщениеКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="НаписатьСообщениеРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<Button name="Отправить" id="75">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<CommandName>Form.Command.Отправить</CommandName>
+									<BackColor>#FFB366</BackColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="76"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<HTMLDocumentField name="ПолеЧата" id="77">
+					<DataPath>ПолеЧата</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Width>40</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>40</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПолеЧатаКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ПолеЧатаРасширеннаяПодсказка" id="79"/>
+					<Events>
+						<Event name="OnClick">ПолеHTMLПриНажатии</Event>
+					</Events>
+				</HTMLDocumentField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ФормаПросмотраОбращенияОператора2</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ИсторияСообщений">
+					<Column name="ДатаВремя" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дата время</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>DateTime</v8:DateFractions>
+							</v8:DateQualifiers>
+						</Type>
+					</Column>
+					<Column name="Автор" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Автор</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Текст" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текст</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПолеЧата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле чата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПринятьДо" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять до</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РешитьДо" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Решить до</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяРеакции" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время реакции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяРешения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время решения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отправить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отправить</Action>
+		</Command>
+		<Command name="НазначитьДругому" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначить другому</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначить другому</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НазначитьДругому</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПараметрФормыПросмотра">
+			<Type>
+				<v8:Type>cfg:DocumentRef.ОбращенияВПоддержку</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

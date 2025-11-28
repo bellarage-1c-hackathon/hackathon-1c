@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ОбновитьСписок" id="161">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Обновить</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ОбновитьСписокРасширеннаяПодсказка" id="162"/>
+		</Button>
+		<UsualGroup name="Группа1" id="6">
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<BackColor>#FFFFFF</BackColor>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<UsualGroup name="Группа_Новое" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа новое</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа новое</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<GroupVerticalAlign>Top</GroupVerticalAlign>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#DCFFD2</BackColor>
+					<ExtendedTooltip name="Группа_НовоеРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<LabelDecoration name="Заголовок_Новое" id="1">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Новое</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Заголовок_НовоеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="Заголовок_НовоеРасширеннаяПодсказка" id="3"/>
+						</LabelDecoration>
+						<UsualGroup name="Группа2" id="451">
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="452"/>
+							<ChildItems>
+								<Button name="ПеренестиНовоеВверх" id="394">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиНовоеВверх</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceUpArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиНовоеВверхРасширеннаяПодсказка" id="395"/>
+								</Button>
+								<Button name="ПеренестиНовоеВниз" id="449">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиНовоеВниз</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceDownArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиНовоеВнизРасширеннаяПодсказка" id="450"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ТаблицаНовое" id="71">
+							<ReadOnly>true</ReadOnly>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Таблица_Новое</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаНовоеКонтекстноеМеню" id="72"/>
+							<AutoCommandBar name="ТаблицаНовоеКоманднаяПанель" id="73">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаНовоеРасширеннаяПодсказка" id="74"/>
+							<SearchStringAddition name="ТаблицаНовоеСтрокаПоиска" id="75">
+								<AdditionSource>
+									<Item>ТаблицаНовое</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНовоеСтрокаПоискаКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="ТаблицаНовоеСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаНовоеСостояниеПросмотра" id="78">
+								<AdditionSource>
+									<Item>ТаблицаНовое</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНовоеСостояниеПросмотраКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ТаблицаНовоеСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаНовоеУправлениеПоиском" id="81">
+								<AdditionSource>
+									<Item>ТаблицаНовое</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНовоеУправлениеПоискомКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="ТаблицаНовоеУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаНовоеВыбор</Event>
+								<Event name="OnActivateRow">ТаблицаНовоеПриАктивизацииСтроки</Event>
+								<Event name="ChoiceProcessing">Таблица1ОбработкаВыбора</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="Таблица1Номер" id="96">
+									<DataPath>Объект.Таблица_Новое.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1НомерКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="Таблица1НомерРасширеннаяПодсказка" id="98"/>
+								</InputField>
+								<InputField name="Таблица1Тема" id="108">
+									<DataPath>Объект.Таблица_Новое.Тема</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1ТемаКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="Таблица1ТемаРасширеннаяПодсказка" id="110"/>
+								</InputField>
+								<InputField name="Таблица1Приоритет" id="112">
+									<DataPath>Объект.Таблица_Новое.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1ПриоритетКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="Таблица1ПриоритетРасширеннаяПодсказка" id="114"/>
+								</InputField>
+								<InputField name="Таблица1Категория" id="100">
+									<DataPath>Объект.Таблица_Новое.Категория</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1КатегорияКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="Таблица1КатегорияРасширеннаяПодсказка" id="102"/>
+								</InputField>
+								<InputField name="Таблица1Ответственный" id="104">
+									<DataPath>Объект.Таблица_Новое.Ответственный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1ОтветственныйКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="Таблица1ОтветственныйРасширеннаяПодсказка" id="106"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа_КВыполнению" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа к выполнению</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа к выполнению</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#D4F1FF</BackColor>
+					<ExtendedTooltip name="Группа_КВыполнениюРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<LabelDecoration name="Заголовок_КВыполнению" id="11">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>К Выполнению</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Заголовок_КВыполнениюКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="Заголовок_КВыполнениюРасширеннаяПодсказка" id="13"/>
+						</LabelDecoration>
+						<UsualGroup name="Группа3" id="453">
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="454"/>
+							<ChildItems>
+								<Button name="ПеренестиКВыполнениюВверх" id="455">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиКВыполнениюВверх</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceUpArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиКВыполнениюВверхРасширеннаяПодсказка" id="456"/>
+								</Button>
+								<Button name="ПеренестиКВыполнениюВниз" id="457">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиКВыполнениюВниз</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceDownArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиКВыполнениюВнизРасширеннаяПодсказка" id="458"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ТаблицаКВыполнению" id="116">
+							<ReadOnly>true</ReadOnly>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Таблица_КВыполнению</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаКВыполнениюКонтекстноеМеню" id="117"/>
+							<AutoCommandBar name="ТаблицаКВыполнениюКоманднаяПанель" id="118">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаКВыполнениюРасширеннаяПодсказка" id="119"/>
+							<SearchStringAddition name="ТаблицаКВыполнениюСтрокаПоиска" id="120">
+								<AdditionSource>
+									<Item>ТаблицаКВыполнению</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаКВыполнениюСтрокаПоискаКонтекстноеМеню" id="121"/>
+								<ExtendedTooltip name="ТаблицаКВыполнениюСтрокаПоискаРасширеннаяПодсказка" id="122"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаКВыполнениюСостояниеПросмотра" id="123">
+								<AdditionSource>
+									<Item>ТаблицаКВыполнению</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаКВыполнениюСостояниеПросмотраКонтекстноеМеню" id="124"/>
+								<ExtendedTooltip name="ТаблицаКВыполнениюСостояниеПросмотраРасширеннаяПодсказка" id="125"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаКВыполнениюУправлениеПоиском" id="126">
+								<AdditionSource>
+									<Item>ТаблицаКВыполнению</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаКВыполнениюУправлениеПоискомКонтекстноеМеню" id="127"/>
+								<ExtendedTooltip name="ТаблицаКВыполнениюУправлениеПоискомРасширеннаяПодсказка" id="128"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаНовоеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="Таблица1Номер1" id="141">
+									<DataPath>Объект.Таблица_КВыполнению.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Номер1КонтекстноеМеню" id="142"/>
+									<ExtendedTooltip name="Таблица1Номер1РасширеннаяПодсказка" id="143"/>
+								</InputField>
+								<InputField name="Таблица1Тема1" id="153">
+									<DataPath>Объект.Таблица_КВыполнению.Тема</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Тема1КонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="Таблица1Тема1РасширеннаяПодсказка" id="155"/>
+								</InputField>
+								<InputField name="Таблица1Приоритет1" id="157">
+									<DataPath>Объект.Таблица_КВыполнению.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Приоритет1КонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="Таблица1Приоритет1РасширеннаяПодсказка" id="159"/>
+								</InputField>
+								<InputField name="Таблица1Категория1" id="145">
+									<DataPath>Объект.Таблица_КВыполнению.Категория</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Категория1КонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="Таблица1Категория1РасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="Таблица1Ответственный1" id="149">
+									<DataPath>Объект.Таблица_КВыполнению.Ответственный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Ответственный1КонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="Таблица1Ответственный1РасширеннаяПодсказка" id="151"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа_ВРаботе" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа в работе</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа в работе</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#D6DCFF</BackColor>
+					<ExtendedTooltip name="Группа_ВРаботеРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<LabelDecoration name="Заголовок_ВРаботе" id="8">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В работе</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Заголовок_ВРаботеКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="Заголовок_ВРаботеРасширеннаяПодсказка" id="10"/>
+						</LabelDecoration>
+						<UsualGroup name="Группа4" id="459">
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="460"/>
+							<ChildItems>
+								<Button name="ПеренестиВРаботеВверх" id="461">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиВРаботеВверх</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceUpArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиВРаботеВверхРасширеннаяПодсказка" id="462"/>
+								</Button>
+								<Button name="ПеренестиВРаботеВниз" id="463">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиВРаботеВниз</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceDownArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиВРаботеВнизРасширеннаяПодсказка" id="464"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ТаблицаВРаботе" id="169">
+							<ReadOnly>true</ReadOnly>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Таблица_ВРаботе</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаВРаботеКонтекстноеМеню" id="170"/>
+							<AutoCommandBar name="ТаблицаВРаботеКоманднаяПанель" id="171">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаВРаботеРасширеннаяПодсказка" id="172"/>
+							<SearchStringAddition name="ТаблицаВРаботеСтрокаПоиска" id="173">
+								<AdditionSource>
+									<Item>ТаблицаВРаботе</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВРаботеСтрокаПоискаКонтекстноеМеню" id="174"/>
+								<ExtendedTooltip name="ТаблицаВРаботеСтрокаПоискаРасширеннаяПодсказка" id="175"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаВРаботеСостояниеПросмотра" id="176">
+								<AdditionSource>
+									<Item>ТаблицаВРаботе</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВРаботеСостояниеПросмотраКонтекстноеМеню" id="177"/>
+								<ExtendedTooltip name="ТаблицаВРаботеСостояниеПросмотраРасширеннаяПодсказка" id="178"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаВРаботеУправлениеПоиском" id="179">
+								<AdditionSource>
+									<Item>ТаблицаВРаботе</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВРаботеУправлениеПоискомКонтекстноеМеню" id="180"/>
+								<ExtendedTooltip name="ТаблицаВРаботеУправлениеПоискомРасширеннаяПодсказка" id="181"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаНовоеВыбор</Event>
+								<Event name="ChoiceProcessing">Таблица1ОбработкаВыбора</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="Таблица1Номер2" id="194">
+									<DataPath>Объект.Таблица_ВРаботе.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Номер2КонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="Таблица1Номер2РасширеннаяПодсказка" id="196"/>
+								</InputField>
+								<InputField name="Таблица1Тема2" id="206">
+									<DataPath>Объект.Таблица_ВРаботе.Тема</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Тема2КонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="Таблица1Тема2РасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="Таблица1Приоритет2" id="210">
+									<DataPath>Объект.Таблица_ВРаботе.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Приоритет2КонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="Таблица1Приоритет2РасширеннаяПодсказка" id="212"/>
+								</InputField>
+								<InputField name="Таблица1Категория2" id="198">
+									<DataPath>Объект.Таблица_ВРаботе.Категория</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Категория2КонтекстноеМеню" id="199"/>
+									<ExtendedTooltip name="Таблица1Категория2РасширеннаяПодсказка" id="200"/>
+								</InputField>
+								<InputField name="Таблица1Ответственный2" id="202">
+									<DataPath>Объект.Таблица_ВРаботе.Ответственный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица1Ответственный2КонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="Таблица1Ответственный2РасширеннаяПодсказка" id="204"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа_ВОжидании" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа в ожидании</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа в работе</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#FFE7D8</BackColor>
+					<ExtendedTooltip name="Группа_ВОжиданииРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<LabelDecoration name="Заголовок_ВОжидании" id="44">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В Ожидании</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Заголовок_ВОжиданииКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="Заголовок_ВОжиданииРасширеннаяПодсказка" id="46"/>
+						</LabelDecoration>
+						<UsualGroup name="Группа5" id="465">
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="466"/>
+							<ChildItems>
+								<Button name="ПеренестиВОжиданииВверх" id="467">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиВОжиданииВверх</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceUpArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиВОжиданииВверхРасширеннаяПодсказка" id="468"/>
+								</Button>
+								<Button name="ПеренестиВОжиданииВниз" id="469">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиВОжиданииВниз</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceDownArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиВОжиданииВнизРасширеннаяПодсказка" id="470"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ТаблицаВОжидании" id="214">
+							<ReadOnly>true</ReadOnly>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Таблица_ВОжидании</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаВОжиданииКонтекстноеМеню" id="215"/>
+							<AutoCommandBar name="ТаблицаВОжиданииКоманднаяПанель" id="216">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаВОжиданииРасширеннаяПодсказка" id="217"/>
+							<SearchStringAddition name="ТаблицаВОжиданииСтрокаПоиска" id="218">
+								<AdditionSource>
+									<Item>ТаблицаВОжидании</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВОжиданииСтрокаПоискаКонтекстноеМеню" id="219"/>
+								<ExtendedTooltip name="ТаблицаВОжиданииСтрокаПоискаРасширеннаяПодсказка" id="220"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаВОжиданииСостояниеПросмотра" id="221">
+								<AdditionSource>
+									<Item>ТаблицаВОжидании</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВОжиданииСостояниеПросмотраКонтекстноеМеню" id="222"/>
+								<ExtendedTooltip name="ТаблицаВОжиданииСостояниеПросмотраРасширеннаяПодсказка" id="223"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаВОжиданииУправлениеПоиском" id="224">
+								<AdditionSource>
+									<Item>ТаблицаВОжидании</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВОжиданииУправлениеПоискомКонтекстноеМеню" id="225"/>
+								<ExtendedTooltip name="ТаблицаВОжиданииУправлениеПоискомРасширеннаяПодсказка" id="226"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаНовоеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="Таблица2Номер" id="239">
+									<DataPath>Объект.Таблица_ВОжидании.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица2НомерКонтекстноеМеню" id="240"/>
+									<ExtendedTooltip name="Таблица2НомерРасширеннаяПодсказка" id="241"/>
+								</InputField>
+								<InputField name="Таблица2Тема" id="251">
+									<DataPath>Объект.Таблица_ВОжидании.Тема</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица2ТемаКонтекстноеМеню" id="252"/>
+									<ExtendedTooltip name="Таблица2ТемаРасширеннаяПодсказка" id="253"/>
+								</InputField>
+								<InputField name="Таблица2Приоритет" id="255">
+									<DataPath>Объект.Таблица_ВОжидании.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица2ПриоритетКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="Таблица2ПриоритетРасширеннаяПодсказка" id="257"/>
+								</InputField>
+								<InputField name="Таблица2Категория" id="243">
+									<DataPath>Объект.Таблица_ВОжидании.Категория</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица2КатегорияКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="Таблица2КатегорияРасширеннаяПодсказка" id="245"/>
+								</InputField>
+								<InputField name="Таблица2Ответственный" id="247">
+									<DataPath>Объект.Таблица_ВОжидании.Ответственный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица2ОтветственныйКонтекстноеМеню" id="248"/>
+									<ExtendedTooltip name="Таблица2ОтветственныйРасширеннаяПодсказка" id="249"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа_Выполнено" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группавыполнено</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа в работе</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#DBFFE6</BackColor>
+					<ExtendedTooltip name="Группа_ВыполненоРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<LabelDecoration name="Заголовок_Выполнено" id="49">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнено</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Заголовок_ВыполненоКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="Заголовок_ВыполненоРасширеннаяПодсказка" id="51"/>
+						</LabelDecoration>
+						<UsualGroup name="Группа6" id="471">
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="472"/>
+							<ChildItems>
+								<Button name="ПеренестиВыполненоВверх" id="473">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиВыполненоВверх</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceUpArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиВыполненоВверхРасширеннаяПодсказка" id="474"/>
+								</Button>
+								<Button name="ПеренестиВыполненоВниз" id="475">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.ПеренестиВыполненоВниз</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.AppearanceDownArrowGray</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<PictureLocation>Left</PictureLocation>
+									<ExtendedTooltip name="ПеренестиВыполненоВнизРасширеннаяПодсказка" id="476"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ТаблицаВыполнено" id="259">
+							<ReadOnly>true</ReadOnly>
+							<ChoiceMode>true</ChoiceMode>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Таблица_Выполнено</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаВыполненоКонтекстноеМеню" id="260"/>
+							<AutoCommandBar name="ТаблицаВыполненоКоманднаяПанель" id="261">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаВыполненоРасширеннаяПодсказка" id="262"/>
+							<SearchStringAddition name="ТаблицаВыполненоСтрокаПоиска" id="263">
+								<AdditionSource>
+									<Item>ТаблицаВыполнено</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВыполненоСтрокаПоискаКонтекстноеМеню" id="264"/>
+								<ExtendedTooltip name="ТаблицаВыполненоСтрокаПоискаРасширеннаяПодсказка" id="265"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаВыполненоСостояниеПросмотра" id="266">
+								<AdditionSource>
+									<Item>ТаблицаВыполнено</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВыполненоСостояниеПросмотраКонтекстноеМеню" id="267"/>
+								<ExtendedTooltip name="ТаблицаВыполненоСостояниеПросмотраРасширеннаяПодсказка" id="268"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаВыполненоУправлениеПоиском" id="269">
+								<AdditionSource>
+									<Item>ТаблицаВыполнено</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВыполненоУправлениеПоискомКонтекстноеМеню" id="270"/>
+								<ExtendedTooltip name="ТаблицаВыполненоУправлениеПоискомРасширеннаяПодсказка" id="271"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаНовоеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="Таблица3Номер" id="284">
+									<DataPath>Объект.Таблица_Выполнено.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица3НомерКонтекстноеМеню" id="285"/>
+									<ExtendedTooltip name="Таблица3НомерРасширеннаяПодсказка" id="286"/>
+								</InputField>
+								<InputField name="Таблица3Тема" id="296">
+									<DataPath>Объект.Таблица_Выполнено.Тема</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица3ТемаКонтекстноеМеню" id="297"/>
+									<ExtendedTooltip name="Таблица3ТемаРасширеннаяПодсказка" id="298"/>
+								</InputField>
+								<InputField name="Таблица3Приоритет" id="300">
+									<DataPath>Объект.Таблица_Выполнено.Приоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица3ПриоритетКонтекстноеМеню" id="301"/>
+									<ExtendedTooltip name="Таблица3ПриоритетРасширеннаяПодсказка" id="302"/>
+								</InputField>
+								<InputField name="Таблица3Категория" id="288">
+									<DataPath>Объект.Таблица_Выполнено.Категория</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица3КатегорияКонтекстноеМеню" id="289"/>
+									<ExtendedTooltip name="Таблица3КатегорияРасширеннаяПодсказка" id="290"/>
+								</InputField>
+								<InputField name="Таблица3Ответственный" id="292">
+									<DataPath>Объект.Таблица_Выполнено.Ответственный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="Таблица3ОтветственныйКонтекстноеМеню" id="293"/>
+									<ExtendedTooltip name="Таблица3ОтветственныйРасширеннаяПодсказка" id="294"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КанбанДоска</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьСписок</Action>
+		</Command>
+		<Command name="ПеренестиНовоеВверх" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести новое вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести новое вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиНовоеВверх</Action>
+		</Command>
+		<Command name="ПеренестиКВыполнениюВверх" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести к выполнению вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести к выполнению вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиКВыполнениюВверх</Action>
+		</Command>
+		<Command name="ПеренестиВРаботеВверх" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в работе вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в работе вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВРаботеВверх</Action>
+		</Command>
+		<Command name="ПеренестиВОжиданииВверх" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в ожидании вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в ожидании вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВОжиданииВверх</Action>
+		</Command>
+		<Command name="ПеренестиВыполненоВверх" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести выполнено вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести выполнено вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВыполненоВверх</Action>
+		</Command>
+		<Command name="ПеренестиНовоеВниз" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести новое вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести новое вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиНовоеВниз</Action>
+		</Command>
+		<Command name="ПеренестиКВыполнениюВниз" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести к выполнению вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести к выполнению</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиКВыполнениюВниз</Action>
+		</Command>
+		<Command name="ПеренестиВыполненоВниз" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести выполнено вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести выполнено вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВыполненоВниз</Action>
+		</Command>
+		<Command name="ПеренестиВРаботеВниз" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в работе вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в работе вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВРаботеВниз</Action>
+		</Command>
+		<Command name="ПеренестиВОжиданииВниз" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в ожидании вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в ожидании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВОжиданииВниз</Action>
+		</Command>
+	</Commands>
+</Form>

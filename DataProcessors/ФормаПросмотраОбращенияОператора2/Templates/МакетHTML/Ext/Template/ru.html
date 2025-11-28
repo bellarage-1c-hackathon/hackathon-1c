@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1.0"></meta><title>Чат переписки</title><style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+        	background: white;
+                        
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #fd9535;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 18px;
+            position: relative;
+            line-height: 1.5; /* Увеличили межстрочный интервал */
+            letter-spacing: 0.9px; /* Добавили отступ между буквами */
+            word-spacing: 0.4px; /* Добавили отступ между словами */
+        }
+
+        .message.sent {
+            background-color: #f0f0f0; /* Светло-серый для оператора */
+            color: #333; /* Темный текст для контраста */
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            border: 1px solid #e0e0e0; /* Легкая граница */
+        }
+
+        .message.received {
+            background-color: #ffb366; /* Светло-оранжевый для клиента */
+            color: #333; /* Темный текст для лучшей читаемости */
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+            border: 1px solid #ffa366; /* Легкая граница */
+        }
+
+        .message-time {
+            font-size: 11px;
+            margin-top: 8px; /* Увеличили отступ сверху */
+            text-align: right;
+            opacity: 0.7;
+            letter-spacing: 0.2px; /* Отступ между буквами для времени */
+        }
+
+        .square_btn {
+            position: relative;
+            display: inline-block;
+            padding: 0.25em 0.5em;
+            text-decoration: none;
+            color: #FFF;
+            background: #fd9535;
+            border-bottom: solid 2px #d27d00;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .square_btn:active {
+            border-bottom: solid 2px #fd9535;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
+    </style></head><body>
+    
+<div class="header">
+        
+<h1>Чат с клиентом</h1>
+    </div>
+
+    
+<div class="chat-area">
+        
+<div class="chat-messages" id="chat-messages">
+<div class="message sent">
+                Привет! Как твои дела?
+                
+<div class="message-time">2025-11-23T16:17:19.787Z</div>
+            </div>
+<div class="message received">
+                Привет! Всё отлично, спасибо. А у тебя как?
+                
+<div class="message-time">2025-11-23T16:17:19.787Z</div>
+            </div></div>
+    </div>
+    
+<script>
+        // Функция для форматирования даты и времени
+        function formatDateTime(dateTimeString) {
+            const date = new Date(dateTimeString);
+            return `${date.getHours().toString()}:${date.getMinutes().toString()}`;
+        }
+
+        // Функция для добавления сообщения в чат
+        function addMessageToChat(text, author, dateTime) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageElement = document.createElement('div');
+            
+            // Определяем класс сообщения в зависимости от автора
+            const messageClass = author === "Клиент" ? 'sent' : 'received';
+            
+            messageElement.className = `message ${messageClass}`;
+            messageElement.innerHTML = `
+                ${text}
+                
+<div class="message-time">${dateTime}</div>
+            `;
+            
+            messagesContainer.appendChild(messageElement);
+            
+            // Прокрутка к последнему сообщению
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // Функция для очистки чата
+        function clearChat() {
+            const messagesContainer = document.getElementById('chat-messages');
+            messagesContainer.innerHTML = '';
+        }
+
+        // Функция для загрузки всех сообщений из истории
+        function loadMessages(historyMessages) {
+            clearChat();
+            
+            // Сортируем сообщения по дате (если необходимо)
+            // historyMessages.sort((a, b) => new Date(a.ДатаВремя) - new Date(b.ДатаВремя));
+            
+            // Добавляем каждое сообщение в чат
+            historyMessages.forEach(message => {
+                addMessageToChat(message.Текст, message.Автор, message.ДатаВремя);
+            });
+        }
+
+        // Инициализация чата при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Здесь будет код для получения данных из 1С
+            // Пока добавляем пример сообщений для демонстрации
+            const exampleMessages = [
+                {
+                    Текст: "Привет! Как твои дела?",
+                    Автор: "Клиент",
+                    ДатаВремя: new Date().toISOString()
+                },
+                {
+                    Текст: "Привет! Всё отлично, спасибо. А у тебя как?",
+                    Автор: "Сотрудник",
+                    ДатаВремя: new Date().toISOString()
+                }
+            ];
+            
+            loadMessages(exampleMessages);
+        });
+    </script></body></html>
